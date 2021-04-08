@@ -1,0 +1,4 @@
+config/NAZWA/cdt.launchMode=run
+config/NAZWA/cdt.toolChain.id=gcc-x86_64-C\:/Program Files/MinGW/bin/gcc.exe
+config/NAZWA/cdt.toolChain.type=org.eclipse.cdt.build.gcc
+eclipse.preferences.version=1
