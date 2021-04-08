@@ -37,11 +37,15 @@ int main() {
 	else {
 						//POMIAR CZASU TRWANIA ALGORYTMU
 
+		int zakres = 0;
+		cout << "Podaj zakres: ";
+		cin >> zakres;
+
 		//Poczatek mierzenia czasu
 		chrono::steady_clock::time_point begin = chrono::steady_clock::now();
 
 		int a = 1;
-		for (int i = 1; i <= 10000; i++){
+		for (int i = 1; i <= zakres; i++){
 
 			a = a + 1;
 			N->push(&N,a);	//Wstawianie nowych elementow na stos
@@ -51,8 +55,8 @@ int main() {
 		//Koniec mierzenia czasu
 		cout << endl << endl;
 		//Wypisywanie czasu trwania algorytmu
-		cout << "Time = " << chrono::duration_cast<chrono::seconds>(end - begin).count() << " [us]  10^(-6)s" << endl;
-		cout << "Time = " << chrono::duration_cast<chrono::milliseconds>(end - begin).count() << " [us]  10^(-6)s" << endl;
+		cout << "Time = " << chrono::duration_cast<chrono::seconds>(end - begin).count() << " [s]  10^(-6)s" << endl;
+		cout << "Time = " << chrono::duration_cast<chrono::milliseconds>(end - begin).count() << " [ms]  10^(-6)s" << endl;
 		cout << "Time = " << chrono::duration_cast<chrono::microseconds>(end - begin).count() << " [us]  10^(-6)s" << endl;
 		cout << "Time = " << chrono::duration_cast<chrono::nanoseconds> (end - begin).count() << " [ns]  10^(-9)s" << endl;
 	}

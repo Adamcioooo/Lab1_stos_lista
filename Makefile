@@ -1,6 +1,6 @@
 PROJECT_ROOT = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-OBJS = main.o
+OBJS = main.o stos.o
 
 ifeq ($(BUILD_MODE),debug)
 	CFLAGS += -g
